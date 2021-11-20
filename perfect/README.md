@@ -22,8 +22,11 @@ This is a basic example of how to use this package:
 
 ``` r
 library(perfect)
-# total_perf(cps, C_SOP, C_SPP, C_OOP)
+total_perf(cps, C_SOP, C_SPP, C_OOP)
+#> Warning: Removed 4 rows containing non-finite values (stat_bin).
 ```
+
+<img src="man/figures/README-example-1.png" width="100%" />
 
 This package makes plotting the distribution of total perfectionism
 scores much more quick and efficient.
