@@ -1,0 +1,44 @@
+
+R version 4.1.1 (2021-08-10) -- "Kick Things"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(testthat)
+> library(perfect)
+> 
+> test_check("perfect")
+== Failed tests ================================================================
+-- Error (test-perfect.R:4:3): function creates ggplot -------------------------
+Error: object 'cps' not found
+Backtrace:
+    x
+ 1. \-perfect:::total_perf(cps, C_SOP, C_SPP, C_OOP) test-perfect.R:4:2
+-- Error (test-perfect.R:9:3): function works ----------------------------------
+Error: unused arguments (C_SOP, C_SPP, C_OOP)
+-- Error (test-perfect.R:13:3): function cannot add non-numeric values ---------
+Error: object 'steam_games' not found
+Backtrace:
+    x
+ 1. +-testthat::expect_error(...) test-perfect.R:13:2
+ 2. | \-testthat:::expect_condition_matching(...)
+ 3. |   \-testthat:::quasi_capture(...)
+ 4. |     +-testthat:::.capture(...)
+ 5. |     | \-base::withCallingHandlers(...)
+ 6. |     \-rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
+ 7. \-perfect:::total_perf(steam_games, name, orignal_price, discount_price)
+
+[ FAIL 3 | WARN 0 | SKIP 0 | PASS 0 ]
+Error: Test failures
+Execution halted
