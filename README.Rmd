@@ -1,0 +1,41 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# perfect
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of perfect is to calculate and plot total perfectionism scores.
+
+## Installation
+
+perfect is not yet on CRAN, but can be downloaded using this command: 
+
+``` r
+devtools::install_github("oftheheavens/perfect")
+```
+
+## Example
+
+This is a basic example of how to use this package:
+
+```{r example}
+library(perfect)
+total_perf(cps, C_SOP, C_SPP, C_OOP)
+```
+
+This package makes plotting the distribution of total perfectionism scores much more quick and efficient. 
+

@@ -1,18 +1,32 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # perfect
 
-### What is this project?
+<!-- badges: start -->
+<!-- badges: end -->
 
-This is a collection of files for my STAT545B project where I had to create a package and a function, which I named "perfect" and "total_perf" respectively. I made this primarily for my own use. 
+The goal of perfect is to calculate and plot total perfectionism scores.
 
+## Installation
 
-### Files in project folder
+perfect is not yet on CRAN, but can be downloaded using this command:
 
-**README.md** - A description of this project, the files within the project director, and how to use them. This file should contain all instructions future users may need to understand the work completed.
+``` r
+devtools::install_github("oftheheavens/perfect")
+```
 
-**perfect** - Inside this folder are all the files for the package, including the description, tests, and md files. 
+## Example
 
-### How to run code in folder
+This is a basic example of how to use this package:
 
-These files are intended to be accessed through R Studio. They were made using R Version 4.1.1. 
+``` r
+library(perfect)
+total_perf(cps, C_SOP, C_SPP, C_OOP)
+#> Warning: Removed 4 rows containing non-finite values (stat_bin).
+```
 
-###### Contact for more information: - Abigail Yuen (yabigail@mail.ubc.ca)
+<img src="man/figures/README-example-1.png" width="100%" />
+
+This package makes plotting the distribution of total perfectionism
+scores much more quick and efficient.
